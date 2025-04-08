@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  
+  .foto {
+    width: 250px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: opacity 0.5s ease;
+  }
+  
+  .surat {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  audio {
+    margin-top: 20px;
+  }
+  
+  #gantiFotoBtn {
+    padding: 10px 20px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #gantiFotoBtn:hover {
+    background-color: #c2185b;
+  }
+  
+  .love-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    transform: rotate(45deg);
+    animation: float 5s linear infinite;
+    opacity: 0.8;
+    bottom: 0; /* 👈 muncul dari bawah */
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+  }
+  
+  .heart::before {
+    top: -10px;
+    left: 0;
+  }
+  
+  .heart::after {
+    left: -10px;
+    top: 0;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(45deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(45deg);
+      opacity: 0;
+    }
+  }
+  
